@@ -1,10 +1,10 @@
 import { StrictMode } from 'react';
-// import './App.css';
+import { useEffect } from 'react';
+
 import { useState } from 'react';
 import { ColorfullMessage } from './components/ColorfullMessage';
 
 export const App = () => {
-  console.log("App");
   const [num, setNum] = useState(0);
   const [isShowFace, setIsShowFace] = useState(true);
   const onClickCountup = () => {
@@ -13,6 +13,16 @@ export const App = () => {
   const onClickToggle = () => {
     setIsShowFace(!isShowFace);
   };
+
+  useEffect(() => {
+    if (num % 3 === 0) {
+      isShowFace || setIsShowFace(true);
+    } else {
+      isShowFace && setIsShowFace(false);
+    }
+  }, [num]);
+
+
 
   return (
     <>

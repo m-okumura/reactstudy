@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
-import './App.css';
+// import './App.css';
 
-const App = () => {
+export const App = () => {
     const onClickButton = () => alert();
     const contentStyle = {
         color: "red",
@@ -16,4 +16,4 @@ const App = () => {
   );
 };
 
-export default App;
+// export default App;
